@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Modave</title>
+		<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+        <link rel="icon" href="images/favicon.png" type="image/png">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="src/slick.css">
+		<link rel="stylesheet" href="src/slick-theme.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="src/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	
+	</head>
+	<body>
+		
+	<div class="mynavlayr" onclick="navopenCls()"></div>
+	<section class="headersec" id="topHeader">
+		<div class="rmenubar"><a href="javascript:void();" style="float:right" onclick="navopenCls()"><i class="fa fa-bars"></i></a></div>	
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-5 col-md-3">
+					<div class="logo text-center text-md-start">
+						<a href="index.html"><img src="images/logo@2x.png" alt=""></a>
+					</div>
+				</div>	
+				<div class="col-1 col-md-6">
+					<div class="cmenu">
+						<ul>
+							<li  class="logo text-start d-block d-lg-none"><img src="images/logo@2x.png" alt=""></li>
+							<li class="active"><a href="index.html">HOME</a></li>
+							<li><a href="about.html">ABOUT</a></li>
+							<li><a href="shop.html">SHOP</a></li>
+							<li><a href="contact.html">CONTACT</a></li>
+							<div class="clsebtn">
+								<a href="javascript:void(0);" style="float:right"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a>
+							</div>
+						</ul>
+					</div>
+				</div>	
+				<div class="col-6 col-md-3">
+					<div class="social-icon">
+						<ul>
+							<li><a href="wishlist.html"><img src="images/heart@2x.png" alt=""></a></li>
+							<li class="carticon"><a href="cart.html"><img src="images/cart@2x.png" alt=""></a><sup id="cart-count">0</sup></li>
+							<li class="usericon"><a href="sign-in.html"><img src="images/user@2x.png" alt=""></a><span id="logoutBtn">Logout</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bannersec">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-md-6 order-1 order-md-0">
+					<div class="bnrcontent">
+						<h1>EXPLORE <br>OUR PRODUCTS</h1>
+						<p>Step into style with our latest collection! Discover trendy fashion, timeless classics, and unbeatable comfort. Shop now for exclusive deals and refresh your wardrobe with confidence and flair!</p>
+						<a href="shop.html" class="commonbtn">Shop now</a>
+					</div>
+				</div>
+				<div class="col-md-6 order-0 order-md-1">
+					<div class="bnrimg">
+						<img src="images/bnrimg.jpg" srcset="images/bnrimg@2x.jpg 2x, images/bnrimg@3x.jpg 3x" alt="banner" >
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="categorysec">
+		<div class="container">
+			<h1>SHOP BY CATEGORY</h1>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="catimg">
+						<img src="images/sunglass-cat-img.png" srcset="images/sunglass-cat-img@2x.png 2x, images/sunglass-cat-img@3x.png 3x" alt="category">
+						<div class="cat-content">
+							<h2>Sunglasses</h2>
+							<p>Stylish, protective, trendy eyewear.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="catimg-sub">
+						<img src="images/apparel.png" srcset="images/apparel@2x.png 2x, images/apparel@3x.png 3x" alt="category">
+						<div class="cat-content">
+							<h2>Apparel</h2>
+							<p>Comfortable, fashionable, versatile clothing.</p>
+						</div>
+					</div>
+					<div class="catimg-sub">
+						<img src="images/bag-cat.png" srcset="images/bag-cat@2x.png 2x, images/bag-cat@3x.png 3x" alt="category">
+						<div class="cat-content">
+							<h2>Bags</h2>
+							<p>Functional, stylish, durable carriers.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="aboutus">
+		<div class="container">
+			<div class="row justify-content-between align-items-end">
+				<div class="col-lg-5">
+					<div class="abtimg">
+						<img src="images/about-img1.png" srcset="images/about-img1@2x.png 2x, images/about-img1@3x.png 3x"  alt="about us">
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="row justify-content-between align-items-end">
+						<div class="col-12">
+							<div class="abtcontent">
+								<h5>ABOUT US</h5>
+								<h1>Why Choose Us</h1>
+								<p>We’re a passionate team bringing you top-quality products at unbeatable prices, all in one place. Our mission is to make shopping simple, stylish, and stress-free. Join us and experience the joy of effortless shopping today. Because you deserve nothing but the best, every single day.</p>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="abtcontent">
+								<p>From the latest trends to everyday essentials, we’ve got everything you need just a click away. Customer satisfaction is at the heart of what we do. Shop with us and elevate your style effortlessly.</p>
+								<a href="#" class="commonbtn">Shop now</a>
+							</div> 
+						</div>
+						<div class="col-lg-7">
+							<div class="abtimg">
+								<img src="images/about-img2.png" srcset="images/about-img2@2x.png 2x, images/about-img2@3x.png 3x"  alt="about us">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <section class="bestseller">
+    <div class="container">
+      <h1 class="text-uppercase">Our Bestsellers</h1>
+      <div class="row productslider" id="productContainer"></div>
+    </div>
+  </section>
+
+  <template id="productTemplate">
+    <div class="col-md-4" id="productCard">
+      <div class="prodcard">
+        <div class="prodimg">
+          <img src=""  alt="product" class="productimg">
+		  <div class="wish-icon">
+			<i class="fa fa-heart-o" aria-hidden="true"></i>
+		  </div>
+        </div>
+
+        <div class="prodcontent text-center">
+          <h4 class="productname"></h4>
+          <div class="star d-flex justify-content-center align-items-center">
+            <img src="images/star@2x.png" alt="">
+            <img src="images/star@2x.png" alt="">
+            <img src="images/star@2x.png" alt="">
+            <img src="images/star@2x.png" alt="">
+            <img src="images/star-outline@2x.png" alt="">
+          </div>
+          <div class="d-flex price justify-content-center">
+            <p><del class="mrp"></del></p>
+            <p class="actualprice"></p>
+          </div>
+		  <div class="d-flex justify-content-between align-items-center mb-3 px-4 stocksec">
+			<p><b>Stock:</b> <span class="productQuantity">30</span></p>
+			<div class="quantitybx">
+				<form id="myform" method="POST" class="quantity quantitypanel" action="#">
+					<input type="button" value="-" class="qtyminus minus" field="quantity">
+					<p class="qty quantityvalue" data-quantity="1">1</p>
+					<input type="button" value="+" class="qtyplus plus" field="quantity">
+				</form>
+			</div>
+		  </div>
+          <div class="btnsec d-flex justify-content-center align-items-center">
+            <a href="product-details.html" class="viewbtn">View Product</a>
+            <a href="cart.html" class="addtocart">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+
+
+	<section class="dealsec">
+		<div class="container">
+			<h1 class="text-uppercase">Deals You Can’t Miss </h1>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-12">
+							<div class="galleryimg1 gal-image">
+								<img src="images/galleryimg1.jpg" srcset="images/galleryimg1@2x.jpg 2x, images/galleryimg1@3x.jpg 3x"  alt="deals">
+								<div class="gal-content">
+									<h3>Up to 50% off</h3>
+									<p>Get t-shirt with 50% off</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="galleryimg2 gal-image">
+								<img src="images/galleryimg2.jpg" srcset="images/galleryimg2@2x.jpg 2x, images/galleryimg2@3x.jpg 3x"  alt="deals">
+								<div class="gal-content">
+									<h3>Up to 60% off</h3>
+									<p>Get shoes with 60% off</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-12">
+							<div class="galleryimg3 gal-image">
+								<img src="images/galleryimg3.jpg" srcset="images/galleryimg3@2x.jpg 2x, images/galleryimg3@3x.jpg 3x"  alt="deals">
+								<div class="gal-content">
+									<h3>Up to 30% off</h3>
+									<p>Get bags with 30% off</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="galleryimg4 gal-image">
+								<img src="images/galleryimg4.jpg" srcset="images/galleryimg4@2x.jpg 2x, images/galleryimg4@3x.jpg 3x"  alt="deals">
+								<div class="gal-content">
+									<h3>Up to 70% off</h3>
+									<p>Get oversized tshirt with 70% off</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="galleryimg5 gal-image">
+								<img src="images/galleryimg5.jpg" srcset="images/galleryimg5@2x.jpg 2x, images/galleryimg5@3x.jpg 3x"  alt="deals">
+								<div class="gal-content">
+									<h3>Up to 40% off</h3>
+									<p>Get sneakers with 40% off</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bestseller">
+		<div class="container">
+			<h1 class="text-uppercase">NEW ARRIVALS</h1>
+			<div class="row newproductslider" id="newArrivalContainer">
+			</div>
+		</div>
+	</section>
+	<template id="newArrivalTemplate">
+		<div class="col-md-4" id="productCard">
+		  <div class="prodcard">
+			<div class="prodimg">
+			  <img src=""  alt="product" class="productimg">
+			  <div class="wish-icon">
+				<i class="fa fa-heart-o" aria-hidden="true"></i>
+			  </div>
+			</div>
+	
+			<div class="prodcontent text-center">
+			  <h4 class="productname"></h4>
+			  <div class="star d-flex justify-content-center align-items-center">
+				<img src="images/star@2x.png" alt="">
+				<img src="images/star@2x.png" alt="">
+				<img src="images/star@2x.png" alt="">
+				<img src="images/star@2x.png" alt="">
+				<img src="images/star-outline@2x.png" alt="">
+			  </div>
+			  <div class="d-flex price justify-content-center">
+				<p><del class="mrp"></del></p>
+				<p class="actualprice"></p>
+			  </div>
+			  <div class="d-flex justify-content-between align-items-center mb-3 px-4 stocksec">
+				<p><b>Stock:</b> <span class="productQuantity">30</span></p>
+				<div class="quantitybx">
+					<form id="myform" method="POST" class="quantity quantitypanel" action="#">
+						<input type="button" value="-" class="qtyminus minus" field="quantity">
+						<p class="qty quantityvalue" data-quantity="1">1</p>
+						<input type="button" value="+" class="qtyplus plus" field="quantity">
+					</form>
+				</div>
+			  </div>
+			  <div class="btnsec d-flex justify-content-center align-items-center">
+				<a href="product-details.html" class="viewbtn">View Product</a>
+				<a href="cart.html" class="addtocart">Add to cart</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </template>
+
+	<section class="coming-soon">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="comingimg">
+						<img src="images/coming-img1.jpg" srcset="images/coming-img1@2x.jpg 2x, images/coming-img1@3x.jpg 3x"  alt="coming soon">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="comingimg">
+						<img src="images/coming-img2.jpg" srcset="images/coming-img2@2x.jpg 2x, images/coming-img2@3x.jpg 3x"  alt="coming soon">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="coming-soon-wrapper">
+			<div class="coming-soon-content">
+				<h2>Coming SOON</h2>
+				<p>Get ready! We’re adding two new categories just for you.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftsec">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-md-3 order-2 order-md-0">
+					<div class="ftmenu">
+						<ul>
+							<li><a href="#">About Us</a></li>
+							<li><a href="shop.html">Shop</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Terms & Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-5 text-center order-1 order-md-1">
+					<div class="ft-content">
+						<h1>Get Updates</h1>
+					    <p class="text-capitalize mb-0">Stay updated with the latest arrivals, exclusive deals, and exciting offers</p>
+					</div>
+					<div class="newsletter">
+						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Get updates">
+						<button type="submit" class="btn">SIGN UP</button>
+					</div>
+					<div class="ft-social-icon">
+						<ul>
+							<li><a href="#"><img src="images/fb-icon@2x.png"  alt="social media"></a></li>
+							<li><a href="#"><img src="images/insta-icon@2x.png"  alt="social media"></a></li>
+							<li><a href="#"><img src="images/twitter-icon@2x.png"  alt="social media"></a></li>
+							<li><a href="#"><img src="images/mail-icon@2x.png"  alt="social media"></a></li>
+							<li><a href="#"><img src="images/call-icon@2x.png"  alt="social media"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 order-0 order-md-2">
+					<div class="ftlogo mb-3 text-center text-md-end">
+						<img src="images/logo-light@2x.png" alt="logo">
+					</div>
+					<div class="ft-content ms-4">
+						<p class="text-center text-md-end">Modave offers curated, high-quality products for modern living, delivering convenience, style, and innovation straight to your doorstep.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		
+
+        
+    
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="src/slick.min.js"></script>
+<script src="src/main.js" type="module"></script>
+<script src="src/custom.js"></script>
+
+</body>
+</html>

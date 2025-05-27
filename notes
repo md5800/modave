@@ -1,0 +1,8 @@
+What .json method does:
+fetch() first gives you a Promise — it’s like saying: “Wait a bit, I’ll get the data for you.”
+
+When the Promise is ready, it gives you a Response object — this is like a sealed package (you still can’t use the actual data yet).
+
+The Response object has a method called .json() — this is a built-in tool to open the package and convert the contents from JSON (text) into a JavaScript object or array.
+
+.json() also returns a Promise because reading and converting the data might take time. So you use .then() again to access the final, usable data.

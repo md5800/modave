@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Modave</title>
+		<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+        <link rel="icon" href="images/favicon.png" type="image/png">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="src/slick.css">
+		<link rel="stylesheet" href="src/slick-theme.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="src/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	
+	</head>
+	<body>
+		
+	<div class="mynavlayr" onclick="navopenCls()"></div>
+	<section class="headersec inrheader" id="topHeader">
+		<div class="rmenubar"><a href="javascript:void();" style="float:right" onclick="navopenCls()"><i class="fa fa-bars"></i></a></div>	
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-5 col-md-3">
+					<div class="logo text-center text-md-start">
+						<a href="index.html"><img src="images/logo@2x.png" alt=""></a>
+					</div>
+				</div>	
+				<div class="col-1 col-md-6">
+					<div class="cmenu">
+						<ul>
+							<li  class="logo text-start d-block d-lg-none"><img src="images/logo@2x.png" alt=""></li>
+							<li class="active"><a href="index.html">HOME</a></li>
+							<li><a href="about.html">ABOUT</a></li>
+							<li><a href="shop.html">SHOP</a></li>
+							<li><a href="contact.html">CONTACT</a></li>
+							<div class="clsebtn">
+								<a href="javascript:void(0);" style="float:right"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a>
+							</div>
+						</ul>
+					</div>
+				</div>	
+				<div class="col-6 col-md-3">
+					<div class="social-icon">
+						<ul>
+							<li><a href="wishlist.html"><img src="images/heart@2x.png" alt=""></a></li>
+							<li class="carticon"><a href="cart.html"><img src="images/cart@2x.png" alt=""></a><sup id="cart-count">0</sup></li>
+							<li class="usericon"><a href="sign-in.html"><img src="images/user@2x.png" alt=""></a><span id="logoutBtn">Logout</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="pencil-bnr">
+		<div class="container">
+			<p class="mb-0">Up to 60% off on selected product</p>
+		</div>
+	</section>
+
+	<section class="cart-sec">
+		<div class="container">
+			<h1 class="text-center text-uppercase">YOUR Cart</h1>
+
+			<div class="row">
+				<div class="col-md-8">
+					<div class="cartbox table-responsive">
+						<table class="align-middle">
+							<thead>
+								<tr>
+									<th>Product</th>
+									<th class="d-none d-md-block">PRICE</th>
+									<th>QUANTITY</th>
+									<th>Total</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="d-flex justify-content-start align-items-center">
+											<div class="prod-img">
+												<img src="images/prodcrd-img1.png" srcset="images/prodcrd-img1@2x.png 2x, images/prodcrd-img1@3x.png 3x" alt="banner" >
+											</div>
+											<div class="prod-content">
+												<h6>Blue crop t-shirt</h6>
+												<p>Light Blue</p>
+												<p class="d-block d-md-none">$30.00</p>
+											</div>
+										</div>
+									</td>
+									<td class="d-none d-md-table-cell">$30.00</td>
+									<td>
+										<div class="quantitybx">
+											<form id="myform" method="POST" class="quantity" action="#">
+												<input type="button" value="-" class="qtyminus minus" field="quantity">
+												<input type="text" name="quantity" value="0" class="qty">
+												<input type="button" value="+" class="qtyplus plus" field="quantity">
+											</form>
+										</div>
+									</td>
+									<td>$30.00</td>
+									<td><img src="images/cross.png"  alt="remove" class="remove" data-id="${product.id}"></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="d-flex justify-content-start align-items-center">
+											<div class="prod-img">
+												<img src="images/prodcrd-img4.png" srcset="images/prodcrd-img4@2x.png 2x, images/prodcrd-img4@3x.png 3x" alt="banner" >
+											</div>
+											<div class="prod-content">
+												<h6>Pink crop t-shirt</h6>
+												<p>Light Pink</p>
+												<p class="d-block d-md-none">$30.00</p>
+											</div>
+										</div>
+									</td>
+									<td class="d-none d-md-table-cell">$30.00</td>
+									<td>
+										<div class="quantitybx">
+											<form id="myform" method="POST" class="quantity" action="#">
+												<input type="button" value="-" class="qtyminus minus" field="quantity">
+												<input type="text" name="quantity" value="0" class="qty">
+												<input type="button" value="+" class="qtyplus plus" field="quantity">
+											</form>
+										</div>
+									</td>
+									<td>$30.00</td>
+									<td><img src="images/cross.png"  alt="remove" class="remove"></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="d-flex justify-content-start align-items-center">
+											<div class="prod-img">
+												<img src="images/prodcrd-img7.jpg" srcset="images/prodcrd-img7@2x.jpg 2x, images/prodcrd-img7@3x.jpg 3x" alt="banner" >
+											</div>
+											<div class="prod-content">
+												<h6>Blue  Night Suit</h6>
+												<p>Light Blue</p>
+												<p class="d-block d-md-none">$30.00</p>
+											</div>
+										</div>
+									</td>
+									<td class="d-none d-md-table-cell">$30.00</td>
+									<td>
+										<div class="quantitybx">
+											<form id="myform" method="POST" class="quantity" action="#">
+												<input type="button" value="-" class="qtyminus minus" field="quantity">
+												<input type="text" name="quantity" value="0" class="qty">
+												<input type="button" value="+" class="qtyplus plus" field="quantity">
+											</form>
+										</div>
+									</td>
+									<td>$30.00</td>
+									<td><img src="images/cross.png"  alt="remove" class="remove"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="sum-box">
+						<h6>Order summary</h6>
+						<div class="sum-details">
+							<div class="d-flex justify-content-between align-items-center">
+								<p>Sub Total</p>
+								<p class="subtotal-price">$90</p>
+							</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<p>Shipping</p>
+								<p>FREE</p>
+							</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<p>Total</p>
+								<p class="total-price">$90</p>
+							</div>
+						</div>
+						<a href="checkout.html" class="checkbtn">Proceed to checkout</a>
+					</div>
+				</div>
+			</div>															
+		</div>
+	</section>
+
+
+
+	<section class="ftsec">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 order-2 order-md-0">
+					<div class="ftmenu">
+						<ul>
+							<li>About Us</li>
+							<li>Shop</li>
+							<li>Contact</li>
+							<li>Terms & Condition</li>
+							<li>Privacy Policy</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 text-center order-1 order-md-1">
+					<div class="ft-content">
+						<h1>Get Updates</h1>
+					    <p>Stay updated with the latest arrivals, exclusive deals, and exciting offers</p>
+					</div>
+					<div class="newsletter">
+						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Get updates">
+						<button type="submit" class="btn">SIGN UP</button>
+					</div>
+					<div class="ft-social-icon">
+						<ul>
+							<li><a href="#"><img src="images/fb-icon@2x.png"  alt="social media"></a></li>
+							<li><a href="#"><img src="images/insta-icon@2x.png"  alt="social media"></a></li>
+							<li><a href="#"><img src="images/twitter-icon@2x.png"  alt="social media"></a></li>
+							<li><a href="#"><img src="images/mail-icon@2x.png"  alt="social media"></a></li>
+							<li><a href="#"><img src="images/call-icon@2x.png"  alt="social media"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 order-0 order-md-2">
+					<div class="ftlogo mb-3 text-center text-md-end">
+						<img src="images/logo-light@2x.png" alt="logo">
+					</div>
+					<div class="ft-content">
+						<p class="text-center text-md-end">Modave offers curated, high-quality products for modern living, delivering convenience, style, and innovation straight to your doorstep.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		
+
+        
+    
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="src/slick.min.js"></script>
+<script src="src/main.js" type="module"></script>
+<script src="src/custom.js"></script>
+<script type="module">
+	import { renderCart } from "./src/renderCart.js";
+	renderCart();
+
+	import { removeFromCart } from "./src/removeFromCart";
+
+	// Attach event listener after DOM is loaded
+	document.addEventListener("DOMContentLoaded", () => {
+	// Initial cart render
+	renderCart();
+
+	// Delegate click event to dynamically loaded elements
+	document.querySelector("tbody").addEventListener("click", function (e) {
+		if (e.target.classList.contains("remove")) {
+		const productId = e.target.getAttribute("data-id");
+		removeFromCart(productId);
+		}
+	});
+	});
+
+  </script>
+</body>
+</html>
