@@ -3,11 +3,14 @@ import { homeQuantityToggle } from "./homeQuantityToggle";
 
 export const showProductContainer = (products) => {
     if (!products) return;
-
+ 
     const productContainer = document.getElementById("productContainer");
     const productTemplate = document.getElementById("productTemplate");
 
-    products.forEach((product) => {
+    // 🔍 Only include products with bestSeller === "true"
+    const bestSellers = products.filter(product => product.bestSeller === "true");
+
+    bestSellers.forEach((product) => {
         const {id, productName, mrp, price, productImage, stock } = product;
         const productClone = productTemplate.content.cloneNode(true);
         
@@ -29,12 +32,11 @@ export const showProductContainer = (products) => {
             addToCart(event, id, stock);
         });
 
-         // 👇 Wishlist Logic Start
+        // ✅ Wishlist Logic
         const isLoggedIn = localStorage.getItem("isloggedin") === "1" || sessionStorage.getItem("loggedIn") === "true";
         const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
         const wishIcon = productClone.querySelector(".wish-icon i");
 
-        // If product already in wishlist, fill the heart
         if (wishlist.some(item => item.id === id)) {
             wishIcon.classList.remove("fa-heart-o");
             wishIcon.classList.add("fa-heart");
@@ -46,32 +48,29 @@ export const showProductContainer = (products) => {
                 alert("Please log in to use the wishlist.");
                 return;
             }
-    
+
             const updatedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
             const index = updatedWishlist.findIndex(item => item.id === id);
-    
+
             if (index > -1) {
-                // Remove from wishlist
                 updatedWishlist.splice(index, 1);
                 wishIcon.classList.remove("fa-heart");
                 wishIcon.classList.add("fa-heart-o");
                 wishIcon.style.color = "inherit";
             } else {
-                // Add to wishlist
                 updatedWishlist.push(product);
                 wishIcon.classList.remove("fa-heart-o");
                 wishIcon.classList.add("fa-heart");
                 wishIcon.style.color = "red";
             }
-    
+
             localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
         });
-
 
         productContainer.appendChild(productClone);
     });
 
-    // ✅ Now initialize slick
+    // ✅ Initialize slick
     $('.productslider').slick({
         dots: false,
         infinite: true,

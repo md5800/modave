@@ -7,10 +7,10 @@
         <link rel="icon" href="images/favicon.png" type="image/png">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="src/slick.css">
-		<link rel="stylesheet" href="src/slick-theme.css">
+		<link rel="stylesheet" href="src/css/slick.css">
+		<link rel="stylesheet" href="src/css/slick-theme.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="src/style.css">
+		<link rel="stylesheet" href="src/css/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -236,79 +236,61 @@
 	<script src="src/custom.js"></script>
 	<script>
 		document.getElementById('userForm').addEventListener('submit', function(event) {
-		  event.preventDefault();
-		
-		  // Get field values
-		  const fname = document.getElementById('fname').value.trim();
-		  const lname = document.getElementById('lname').value.trim();
-		  const email = document.getElementById('Emailfield').value.trim();
-		  const phone = document.getElementById('phonefield').value.trim();
-		  const address = document.getElementById('addressfield').value.trim();
-		  const city = document.getElementById('cityfield').value.trim();
-		  const zip = document.getElementById('zipfield').value.trim();
-		  const state = document.getElementById('selectfield').value;
-		  const country = document.getElementById('selectcountryfield').value;
-		
-		  let isValid = true;
-		  let message = '';
-		
-		  // Validation
-		  if (!fname) {
-			isValid = false;
-			message += 'First name is required.\n';
-		  }
-		  if (!lname) {
-			isValid = false;
-			message += 'Last name is required.\n';
-		  }
-		  if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
-			isValid = false;
-			message += 'Valid email is required.\n';
-		  }
-		  if (!phone || !/^\d{10,15}$/.test(phone)) {
-			isValid = false;
-			message += 'Valid phone number is required (10–15 digits).\n';
-		  }
-		  if (!address) {
-			isValid = false;
-			message += 'Address is required.\n';
-		  }
-		  if (!city) {
-			isValid = false;
-			message += 'City is required.\n';
-		  }
-		  if (!zip) {
-			isValid = false;
-			message += 'Zip code is required.\n';
-		  }
-		  if (state === 'Select State') {
-			isValid = false;
-			message += 'Please select a state.\n';
-		  }
-		  if (country === 'Select Country') {
-			isValid = false;
-			message += 'Please select a country.\n';
-		  }
-		
-		  // If not valid, show error
-		  if (!isValid) {
-			alert(message);
-			return;
-		  }
-		
-		  // ✅ If valid, simulate form submission and scroll to payment section
-		  // You can replace this with an actual AJAX call if needed
-		  console.log("Form submitted successfully!");
-		
-		  // Scroll to payment section
-		  const paymentSection = document.getElementById('payment-section');
-			if (paymentSection) {
-			console.log("Scrolling to payment section...");
-			paymentSection.scrollIntoView({ behavior: 'smooth' });
-			} else {
-			console.log("Payment section not found!");
-			}
-		});
+  event.preventDefault();
+
+  const fields = {
+    fname: document.getElementById('fname'),
+    lname: document.getElementById('lname'),
+    email: document.getElementById('Emailfield'),
+    phone: document.getElementById('phonefield'),
+    address: document.getElementById('addressfield'),
+    city: document.getElementById('cityfield'),
+    zip: document.getElementById('zipfield'),
+    state: document.getElementById('selectfield'),
+    country: document.getElementById('selectcountryfield'),
+  };
+
+  let isValid = true;
+  let message = '';
+
+  // Clear previous borders
+  for (const key in fields) {
+    fields[key].classList.remove('input-error', 'input-success');
+  }
+
+  // Validation logic
+  const validateField = (field, condition, errorMsg) => {
+    if (condition) {
+      field.classList.add('input-success');
+    } else {
+      field.classList.add('input-error');
+      isValid = false;
+      message += errorMsg + '\n';
+    }
+  };
+
+  validateField(fields.fname, fields.fname.value.trim(), 'First name is required.');
+  validateField(fields.lname, fields.lname.value.trim(), 'Last name is required.');
+  validateField(fields.email, /^\S+@\S+\.\S+$/.test(fields.email.value.trim()), 'Valid email is required.');
+  validateField(fields.phone, /^\d{10,15}$/.test(fields.phone.value.trim()), 'Valid phone number is required (10–15 digits).');
+  validateField(fields.address, fields.address.value.trim(), 'Address is required.');
+  validateField(fields.city, fields.city.value.trim(), 'City is required.');
+  validateField(fields.zip, fields.zip.value.trim(), 'Zip code is required.');
+  validateField(fields.state, fields.state.value !== 'Select State', 'Please select a state.');
+  validateField(fields.country, fields.country.value !== 'Select Country', 'Please select a country.');
+
+  if (!isValid) {
+    alert(message);
+    return;
+  }
+
+  console.log("Form submitted successfully!");
+  const paymentSection = document.getElementById('payment-section');
+  if (paymentSection) {
+    paymentSection.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
 	</script>
 		
 </body>

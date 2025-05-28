@@ -189,7 +189,12 @@ ul, ol {
     transform: scaleX(1.02);
 }
 
-
+.input-error {
+    border: 1px solid red !important;
+  }
+  .input-success {
+    border: 1px solid green !important;
+  }
 
 /*========================Header======================*/
 .headersec {

@@ -1,19 +1,17 @@
-import './style.css'
+import './css/style.css'
 
-import products from "../api/products.json";
-import shopproducts from "../api/shopProducts.json";
-import newArrivalProducts from "../api/newArrivalProducts.json"
+import allProducts from "../api/all-products.json";
 import { showProductContainer } from './homeProductCards';
 import { showShopProductContainer, clearShopProductContainer } from './shopProductCards';
 import { showNewArrivalContainer } from './newArrivalProductCards';
 
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("productTemplate")) {
-    showProductContainer(products);
+    showProductContainer(allProducts);
   }
 
   if (document.getElementById("shopproductTemplate")) {
-    showShopProductContainer(shopproducts); // Initial render
+    showShopProductContainer(allProducts); // Initial render
 
     // Gender filter event listeners
     document.querySelectorAll('input[name="gender"]').forEach(radio => {
@@ -32,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (document.getElementById("newArrivalTemplate")) {
-    showNewArrivalContainer(newArrivalProducts);
+    showNewArrivalContainer(allProducts);
   }
 });
 
@@ -48,7 +46,7 @@ function applyFilters() {
   ).map(cb => cb.value.trim().toLowerCase());
 
   // Start with all products
-  let filteredProducts = shopproducts;
+  let filteredProducts = allProducts;
 
   // Filter by gender if not 'all'
   if (selectedGender !== "all") {

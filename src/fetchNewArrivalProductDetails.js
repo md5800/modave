@@ -3,21 +3,19 @@ function getQueryParam(name) {
   return urlParams.get(name);
 }
 
-async function fetchProductFromSources(productId, sources) {
-  for (const src of sources) {
-    try {
-      const response = await fetch(src);
-      const products = await response.json();
+async function fetchProductFromSource(productId, src) {
+  try {
+    const response = await fetch(src);
+    const products = await response.json();
 
-      console.log(`Checking source: ${src}`, products);
+    console.log(`Fetched from source: ${src}`, products);
 
-      const product = products.find(p => String(p.id) === String(productId));
-      if (product) return product;
-    } catch (err) {
-      console.error(`Failed to fetch or parse from ${src}:`, err);
-    }
+    const product = products.find(p => String(p.id) === String(productId));
+    return product || null;
+  } catch (err) {
+    console.error(`Failed to fetch or parse from ${src}:`, err);
+    return null;
   }
-  return null;
 }
 
 async function loadProductDetails() {
@@ -29,13 +27,9 @@ async function loadProductDetails() {
     return;
   }
 
-  const sources = [
-    "api/newArrivalProducts.json",
-    "api/products.json",
-    "api/shopProducts.json"
-  ];
+  const source = "api/all-products.json";
 
-  const product = await fetchProductFromSources(productId, sources);
+  const product = await fetchProductFromSource(productId, source);
 
   if (product) {
     renderProductDetails(product);
@@ -46,8 +40,6 @@ async function loadProductDetails() {
 }
 
 loadProductDetails();
-
-
 
 function renderProductDetails(product) {
   const mainSlide = document.querySelector(".main-slide");

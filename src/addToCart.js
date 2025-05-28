@@ -3,13 +3,17 @@ import { getCartDataFromLS } from "./getCartDataFromLS";
 export const addToCart = (event, id, stock) => {
     let arrLocalStorageProduct = getCartDataFromLS();
 
-    const currentProductElement = document.querySelector(`#card${id}`);
+    // 🔥 Use the clicked button's closest parent with class "prodcard"
+    const currentProductElement = event.target.closest('.prodcard');
+    if (!currentProductElement) {
+        console.error("Product card not found for Add to Cart.");
+        return;
+    }
+
     let quantity = parseInt(currentProductElement.querySelector('.quantityvalue').innerText);
     let priceText = currentProductElement.querySelector('.actualprice').innerText.replace("$", "");
-    // let price = parseFloat(priceText);
     let unitPrice = parseFloat(priceText); 
 
-    // 👇 New: Get product name and image URL
     let name = currentProductElement.querySelector('.productname').innerText;
     let image = currentProductElement.querySelector('.productimg').getAttribute('src');
 
@@ -17,7 +21,7 @@ export const addToCart = (event, id, stock) => {
 
     if (existingProduct) {
         existingProduct.quantity = parseInt(existingProduct.quantity) + quantity;
-        existingProduct.price = price * existingProduct.quantity;
+        existingProduct.price = unitPrice * existingProduct.quantity;
     } else {
         arrLocalStorageProduct.push({
             id,

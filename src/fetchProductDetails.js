@@ -8,7 +8,7 @@ function getQueryParam(name) {
   console.log(productId);
 
   if (productId) {
-    fetch("../api/products.json") // ✅ Update path if needed based on file structure
+    fetch("../api/all-products.json") // ✅ Update path if needed based on file structure
       .then(res => res.json())
       .then(products => {
         const product = products.find(p => p.id === productId);
