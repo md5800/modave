@@ -1,0 +1,291 @@
+[
+    {
+        "id": "11",
+        "gender": "Women",
+        "bestSeller": "true",
+        "newArrival": "false",
+        "category": "t-shirt",
+        "productName": "Women Blue T-shirt",
+        "mrp" : "55.00",
+        "price": "30.00",
+        "productImage": "../images/prodcrd-img1.png",
+        "productImages": [
+            "images/prodcrd-img1.png",
+            "images/prodcrd-img1.png",
+            "images/prodcrd-img1.png"
+        ],
+        "stock": "20"
+    },
+    {
+        "id": "12",
+        "gender": "Women",
+        "bestSeller": "true",
+        "newArrival": "false",
+        "category": "night-suit",
+        "productName": "Women Yellow Night Suit",
+        "mrp" : "75.00",
+        "price": "45.00",
+        "productImage": "../images/prodcrd-img2.jpg",
+        "productImages": [
+            "images/prodcrd-img2.jpg",
+            "images/prodcrd-img2.jpg",
+            "images/prodcrd-img2.jpg"
+        ],
+        "stock": "30"
+    },
+    {
+        "id": "13",
+        "gender": "Men",
+        "bestSeller": "true",
+        "newArrival": "false",
+        "category": "polo t-shirt",
+        "productName": "Men White Polo T-shirt",
+        "mrp" : "45.00",
+        "price": "35.00",
+        "productImage": "../images/prodcrd-img3.jpg",
+        "productImages": [
+            "images/prodcrd-img3.jpg",
+            "images/prodcrd-img3.jpg",
+            "images/prodcrd-img3.jpg"
+        ],
+        "stock": "50"
+    },
+    {
+        "id": "14",
+        "gender": "Unisex",
+        "bestSeller": "true",
+        "newArrival": "false",
+        "category": "sunglass",
+        "productName": "Unisex Sunglass Green",
+        "mrp" : "25.00",
+        "price": "15.00",
+        "productImage": "../images/prodcrd-img11.jpg",
+        "productImages": [
+            "images/prodcrd-img11.jpg",
+            "images/prodcrd-img11.jpg",
+            "images/prodcrd-img11.jpg"
+        ],
+        "stock": "45"
+    },
+    {
+        "id": "15",
+        "gender": "Women",
+        "bestSeller": "true",
+        "newArrival": "false",
+        "category": "Crop Top",
+        "productName": "Women Black Crop Top",
+        "mrp" : "35.00",
+        "price": "20.00",
+        "productImage": "../images/prodcrd-img5.png",
+        "productImages": [
+            "images/prodcrd-img5.png",
+            "images/prodcrd-img5.png",
+            "images/prodcrd-img5.png"
+        ],
+        "stock": "60"
+    },
+    {
+        "id": "16",
+        "gender": "Unisex",
+        "bestSeller": "true",
+        "newArrival": "false",
+        "category": "sunglass",
+        "productName": "Unisex Sunglass Brown",
+        "mrp" : "25.00",
+        "price": "15.00",
+        "productImage": "../images/prodcrd-img8.png",
+        "productImages": [
+            "images/prodcrd-img8.png",
+            "images/prodcrd-img8.png",
+            "images/prodcrd-img8.png"
+        ],
+        "stock": "35"
+    },
+    {
+        "id": "17",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "false",
+        "category": "Bag",
+        "productName": "Black Sling Bag",
+        "mrp" : "35.00",
+        "price": "18.00",
+        "productImage": "../images/prodcrd-img9.jpg",
+        "productImages": [
+            "images/prodcrd-img9.jpg",
+            "images/prodcrd-img9.jpg",
+            "images/prodcrd-img9.jpg"
+        ],
+        "stock": "35"
+    },
+    {
+        "id": "18",
+        "gender": "Men",
+        "bestSeller": "false",
+        "newArrival": "false",
+        "category": "Polo T-Sirt",
+        "productName": "Men Grey Polo T-shirt",
+        "mrp" : "35.00",
+        "price": "18.00",
+        "productImage": "../images/prodcrd-img10.jpg",
+        "productImages": [
+            "images/prodcrd-img10.jpg",
+            "images/prodcrd-img10.jpg",
+            "images/prodcrd-img10.jpg"
+        ],
+        "stock": "35"
+    },
+    {
+        "id": "19",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "false",
+        "category": "Crop Top",
+        "productName": "Women Crop T-shirt",
+        "mrp" : "35.00",
+        "price": "18.00",
+        "productImage": "../images/prodcrd-img6.png",
+        "productImages": [
+            "images/prodcrd-img6.png",
+            "images/prodcrd-img6.png",
+            "images/prodcrd-img6.png"
+        ],
+        "stock": "35"
+    },
+    {
+        "id": "21",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "true",
+        "category": "sweatshirt",
+        "productName": "Women Black Sweatshirt",
+        "mrp" : "55.00",
+        "price": "30.00",
+        "productImage": "../images/newarrival-product1.jpg",
+        "productImages": [
+            "images/newarrival-product1.jpg",
+            "images/newarrival-product1.jpg",
+            "images/newarrival-product1.jpg"
+        ],
+        "stock": "20"
+    },
+    {
+        "id": "22",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "true",
+        "category": "pullover",
+        "productName": "Women Yellow Pullover",
+        "mrp" : "75.00",
+        "price": "45.00",
+        "productImage": "../images/newarrival-product2.jpg",
+        "productImages": [
+            "images/newarrival-product2.jpg",
+            "images/newarrival-product2.jpg",
+            "images/newarrival-product2.jpg"
+        ],
+        "stock": "30"
+    },
+    {
+        "id": "23",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "true",
+        "category": "sweatshirt",
+        "productName": "Women Beige Sweatshirt",
+        "mrp" : "45.00",
+        "price": "35.00",
+        "productImage": "../images/newarrival-product3.jpg",
+        "productImages": [
+            "images/newarrival-product3.jpg",
+            "images/newarrival-product3.jpg",
+            "images/newarrival-product3.jpg"
+        ],
+        "stock": "50"
+    },
+    {
+        "id": "24",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "true",
+        "category": "sweatshirt",
+        "productName": "Women crop Sweatshirt",
+        "mrp" : "25.00",
+        "price": "15.00",
+        "productImage": "../images/newarrival-product4.jpg",
+        "productImages": [
+            "images/newarrival-product4.jpg",
+            "images/newarrival-product4.jpg",
+            "images/newarrival-product4.jpg"
+        ],
+        "stock": "45"
+    },
+    {
+        "id": "25",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "true",
+        "category": "shirt",
+        "productName": "Women check Shirt",
+        "mrp" : "35.00",
+        "price": "20.00",
+        "productImage": "../images/newarrival-product5.jpg",
+        "productImages": [
+            "images/newarrival-product5.jpg",
+            "images/newarrival-product5.jpg",
+            "images/newarrival-product5.jpg"
+        ],
+        "stock": "60"
+    },
+    {
+        "id": "26",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "true",
+        "category": "top",
+        "productName": "Women Green Top",
+        "mrp" : "25.00",
+        "price": "15.00",
+        "productImage": "../images/newarrival-product6.jpg",
+        "productImages": [
+            "images/newarrival-product6.jpg",
+            "images/newarrival-product6.jpg",
+            "images/newarrival-product6.jpg"
+        ],
+        "stock": "35"
+    },
+    {
+        "id": "27",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "true",
+        "category": "top",
+        "productName": "Women White Top",
+        "mrp" : "35.00",
+        "price": "18.00",
+        "productImage": "../images/newarrival-product7.jpg",
+        "productImages": [
+            "images/newarrival-product7.jpg",
+            "images/newarrival-product7.jpg",
+            "images/newarrival-product7.jpg"
+        ],
+        "stock": "35"
+    },
+    {
+        "id": "28",
+        "gender": "Women",
+        "bestSeller": "false",
+        "newArrival": "true",
+        "category": "pullover",
+        "productName": "Women White Pullover",
+        "mrp" : "35.00",
+        "price": "18.00",
+        "productImage": "../images/newarrival-product8.jpg",
+        "productImages": [
+            "images/newarrival-product8.jpg",
+            "images/newarrival-product8.jpg",
+            "images/newarrival-product8.jpg"
+        ],
+        "stock": "35"
+    }
+]

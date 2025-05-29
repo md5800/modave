@@ -849,22 +849,23 @@ font-family: "DM Serif Display", serif;
 
 /*========================Shop Page======================*/
 .product-sec{
-    padding: 3.4375rem 0 5.3125rem;
+    padding: 3.4375rem 0 0rem;
 }
 
 .product-sec h1{margin-bottom: 3.4375rem;font-size: 2.5000rem}
 
 .dvdr{width: 100%;height: 0.0625rem;background: #D9D9D9;margin: 0 auto}
-.filterbox{position: relative;}
-.filterbox:after {
+.filterbox{position: relative;    padding-bottom: 2.5rem;}
+/* .filterbox:after {
     content: "";
     position: absolute;
     top: -1.5625rem;
     right: 0;
     background: #D9D9D9;
     width: 0.0625rem;
-    height: 170%;
-}
+    height: 160%;
+} */
+.bd-right {border-right: 1px solid #D9D9D9;}
 
 .filters {margin-top: 1.5625rem;font-size: 0.8750rem;}
 .filters h5{font-size: 1.1250rem;font-weight: 600;text-transform: uppercase;margin-bottom: 0.7500rem}
@@ -1592,7 +1593,7 @@ CSS FOR CONTACT PAGE
 
 /*=================== Shop page =================== */
 .product-sec {
-    padding: 2.5000rem 0 5.0000rem;
+    padding: 2.5000rem 0 0rem;
 }
 .product-sec h1 {
     margin-bottom: 2.5000rem;
@@ -1732,7 +1733,7 @@ CSS FOR CONTACT PAGE
 
 /*=================== Shop page =================== */
 .product-sec {
-    padding: 3.1250rem 0 5.3125rem;
+    padding: 3.1250rem 0 0rem;
 }
 .product-sec h1 {
     margin-bottom: 2.5000rem;
@@ -1896,7 +1897,7 @@ CSS FOR CONTACT PAGE
 
 /*=================== Shop page =================== */
 .product-sec {
-    padding: 4.0625rem 0 5.6250rem;
+    padding: 4.0625rem 0 0rem;
 }
 .filters h5 {    font-size: 2.0000rem;    margin-bottom: 1.7500rem;}
 .filters .form-check {

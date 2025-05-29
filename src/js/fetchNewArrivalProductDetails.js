@@ -27,7 +27,7 @@ async function loadProductDetails() {
     return;
   }
 
-  const source = "api/all-products.json";
+  const source = "/api/all-products.json"; // ✅ Updated path
 
   const product = await fetchProductFromSource(productId, source);
 
