@@ -465,7 +465,7 @@ font-size: 2.8125rem;margin-bottom: 0.6250rem;
     width: 100%;height: 23.4375rem;overflow: hidden; position: relative;
 }
 
-.prodcard .prodimg img{width: 100%;height: 100%;object-fit: cover;}
+.prodcard .prodimg img{width: 100%;height: 100%;object-fit: cover;    object-position: top center;}
 /* .newproductslider  .prodimg{background-color: #f2f2f2;}
 .newproductslider  .prodimg img{object-fit: contain;} */
 
@@ -782,7 +782,7 @@ font-family: "DM Serif Display", serif;
      width: 100%;height:10.0625rem;overflow: hidden;
 }
 .main-slide .image img, .sub-slide .image img{
-    width: 100%;height: 100%;object-fit: cover;
+    width: 100%;height: 100%;object-fit: cover;object-position: top center;
 }
 
 .sub-slide .slick-slide{

@@ -9,15 +9,16 @@ function getProductIdFromURL() {
     const id = getProductIdFromURL();
     const name = document.querySelector(".product-content h1")?.textContent.trim();
     const priceText = document.querySelector(".price p")?.textContent.trim().replace("$", "");
-    const price = parseFloat(priceText);
+    const unitPrice = parseFloat(priceText);
     const image = document.querySelector(".main-slide img")?.getAttribute("src") || "";
-
+  
     return {
       id,
       name,
-      price,
+      unitPrice, // ✅ use this consistently
       image,
       quantity: 1,
+      price: unitPrice * 1, // Optional: store total price too
     };
   }
 
